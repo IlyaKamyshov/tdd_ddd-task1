@@ -21,4 +21,8 @@ public class PhoneBook {
         throw new RuntimeException("Number is missing in PhoneBook");
     }
 
+    public static String findByName(String name) {
+        return null;
+    }
+
 }
