@@ -28,7 +28,13 @@ public class PhoneBook {
     }
 
     public static String printAllNames() {
-        return null;
+        List<String> list = new ArrayList<>();
+        for (Map.Entry entry : phoneBook.entrySet()) {
+            String string = entry.getKey().toString();
+            list.add(string);
+            System.out.println(string);
+        }
+        return list.toString();
     }
 
 }
