@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -13,7 +15,7 @@ public class PhoneBook {
     }
 
     public static String findByNumber(String phoneNumber) {
-        for(Map.Entry entry: phoneBook.entrySet()) {
+        for (Map.Entry entry : phoneBook.entrySet()) {
             if (phoneNumber.equals(entry.getValue())) {
                 return entry.getKey().toString();
             }
@@ -23,6 +25,10 @@ public class PhoneBook {
 
     public static String findByName(String name) {
         return phoneBook.get(name);
+    }
+
+    public static String printAllNames() {
+        return null;
     }
 
 }

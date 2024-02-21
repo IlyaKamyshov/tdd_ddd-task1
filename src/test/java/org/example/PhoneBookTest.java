@@ -34,4 +34,14 @@ public class PhoneBookTest {
         assertThat(actualPhoneNumber, is(expectedPhoneNumber));
     }
 
+    @Test
+    void printAllNames() {
+        PhoneBook.add("Vlad P", "+7-(777)-777-1234");
+        PhoneBook.add("Donald Trump", "+1-(333)-333-1234");
+        PhoneBook.add("Sleepy Joe", "+1-(555)-555-1234");
+        String expected = "[Donald Trump, Sleepy Joe, Vlad P]";
+        String actual = PhoneBook.printAllNames();
+        assertThat(actual, is(expected));
+    }
+
 }
