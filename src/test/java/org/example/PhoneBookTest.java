@@ -16,4 +16,13 @@ public class PhoneBookTest {
         assertThat(actual, is(expected));
     }
 
+    @Test
+    void findByNumber() {
+        PhoneBook.add("Sleepy Joe", "+1-(555)-555-1234");
+        String expectedName = "Sleepy Joe";
+        String actualPhoneNumber = "+1-(555)-555-1234";
+        String actualName = PhoneBook.findByNumber(actualPhoneNumber);
+        assertThat(actualName, is(expectedName));
+    }
+
 }
