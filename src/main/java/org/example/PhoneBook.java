@@ -13,7 +13,12 @@ public class PhoneBook {
     }
 
     public static String findByNumber(String phoneNumber) {
-        return null;
+        for(Map.Entry entry: phoneBook.entrySet()) {
+            if (phoneNumber.equals(entry.getValue())) {
+                return entry.getKey().toString();
+            }
+        }
+        throw new RuntimeException("Number is missing in PhoneBook");
     }
 
 }
